@@ -1,0 +1,18 @@
+@name Rogue Outfit
+@inputs 
+@outputs 
+@persist 
+@trigger 
+
+############################
+# TroyanGeneric PUBLIC E2s #
+# Only with the Mod. Auth. #
+# Use at your own risk.    #
+############################
+
+runOnTick(1)
+
+owner():setSubMaterial(1,"models/dpfilms/metropolice/resistance_police/metrocop_sheet")
+
+## models/dpfilms/metropolice/hd_police/metrocop_sheet
+## models/dpfilms/metropolice/resistance_police/metrocop_sheet

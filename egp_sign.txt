@@ -1,0 +1,74 @@
+@name EGP Sign
+@inputs EGP:wirelink
+@outputs 
+@persist
+@trigger 
+
+############################
+# TroyanGeneric PUBLIC E2s #
+############################
+
+interval(60)
+
+    EGP:egpBox(1,vec2(255,255),vec2(500,500))
+    EGP:egpColor(1,vec(30,30,30))
+
+    EGP:egpBox(2,vec2(130,90),vec2(70,200)) #Background
+    EGP:egpColor(2,vec(0,0,0))
+    EGP:egpMaterial(2,"vgui/gradhr")
+    EGP:egpAlpha(2, 155)
+    EGP:egpAngle(2, 90)
+    
+    EGP:egpBox(3,vec2(355,90),vec2(70,250)) #Background
+    EGP:egpColor(3,vec(0,0,0))
+    EGP:egpMaterial(3,"vgui/gradhr")
+    EGP:egpAlpha(3, 155)
+    EGP:egpAngle(3, -90)
+    
+    EGP:egpText(5,"TITLE - PUT YOUR TEXT HERE", vec2(255,75))
+    EGP:egpColor(5,vec(255,255,255))
+    EGP:egpSize(5, 38)
+    EGP:egpFont(5, "lucida console")
+    EGP:egpAlign(5 + 0, 1, 0)
+    
+    EGP:egpBox(12,vec2(255,255),vec2(500,500)) #Background
+    EGP:egpColor(12,vec(255,255,255))
+    EGP:egpMaterial(12,"effects/combine_binocoverlay")
+    EGP:egpAlpha(12, 100)
+    
+    EGP:egpText(8,"SUBTITLE - PUT YOUR TEXT HERE", vec2(255,150))
+    EGP:egpColor(8,vec(0,255,255))
+    EGP:egpSize(8, 25)
+    EGP:egpFont(8, "lucida console")
+    EGP:egpAlign(8 + 0, 1, 0)
+    
+    EGP:egpText(7,"PUT YOUR TEXT HERE", vec2(255,190))
+    EGP:egpColor(7,vec(255,20,0))
+    EGP:egpSize(7, 30)
+    EGP:egpFont(7, "dermadefault")
+    EGP:egpAlign(7 + 0, 1, 0)
+    
+    EGP:egpText(9,"PUT YOUR TEXT HERE", vec2(255,250))
+    EGP:egpColor(9,vec(255,20,0))
+    EGP:egpSize(9, 30)
+    EGP:egpFont(9, "arial")
+    EGP:egpAlign(9 + 0, 1, 0)
+
+
+    EGP:egpText(10,"PUT YOUR TEXT HERE", vec2(255,285))
+    EGP:egpColor(10,vec(255,20,0))
+    EGP:egpSize(10, 20)
+    EGP:egpFont(10, "arial")
+    EGP:egpAlign(10 + 0, 1, 0)
+    
+    EGP:egpText(11,"PUT YOUR TEXT HERE", vec2(255,310))
+    EGP:egpColor(11,vec(255,20,0))
+    EGP:egpSize(11, 20)
+    EGP:egpFont(11, "arial")
+    EGP:egpAlign(11 + 0, 1, 0)
+    
+    EGP:egpText(13,"PUT YOUR TEXT HERE", vec2(255,335))
+    EGP:egpColor(13,vec(255,20,0))
+    EGP:egpSize(13, 18)
+    EGP:egpFont(13, "arial")
+    EGP:egpAlign(13 + 0, 1, 0)

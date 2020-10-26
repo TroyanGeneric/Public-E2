@@ -1,0 +1,19 @@
+@name Sleeping Vortigaunt
+@inputs 
+@outputs 
+@persist 
+@trigger 
+
+############################
+# TroyanGeneric PUBLIC E2s #
+# Use at your own risk.    #
+# Everytime you'll move    #
+# with the chip you need   #
+# to update it.            #################
+#  -> Right Click on Chip -> Update & Exit #
+############################################
+    
+    holoCreate(1)
+    holoModel(1,"models/vortigaunt.mdl")
+    holoAnim(1,"chess_wait")
+

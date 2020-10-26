@@ -1,0 +1,35 @@
+@name Father Gregory
+@inputs Constant [P Target1]:entity
+@outputs 
+@persist 
+@trigger 
+
+############################
+# TroyanGeneric PUBLIC E2s #
+############################
+
+if(Constant == 0){
+    holoDelete(1)
+}
+
+if(Target1:team() == 0){
+    soundPlay(1,0,"")
+    soundVolume(1,100)
+}
+if(Target1:team() == 1){
+    soundPlay(1,0,"ravenholm.pyre_anotherlife")
+    soundVolume(1,100)
+        
+        holoCreate(1)
+        holoModel(1,"models/monk.mdl")
+        holoAnim(1,"ACT_IDLE")
+}
+
+if(Target1:team() == 2){
+    soundPlay(1,0,"ravenholm.pyre_anotherlife")
+    soundVolume(1,100)
+    
+        holoCreate(1)
+        holoModel(1,"models/monk.mdl")
+        holoAnim(1,"ACT_IDLE")
+}

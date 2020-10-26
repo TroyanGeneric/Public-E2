@@ -1,0 +1,17 @@
+@name Loyalist Outfit
+@inputs 
+@outputs 
+@persist 
+@trigger 
+
+############################
+# TroyanGeneric PUBLIC E2s #
+############################
+
+runOnTick(1)
+
+owner():setBodygroup(1,13)
+owner():setBodygroup(2,2)
+owner():setBodygroup(3,2)
+owner():setBodygroup(4,1)
+owner():setBodygroup(5,1)

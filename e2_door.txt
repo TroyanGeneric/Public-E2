@@ -1,0 +1,63 @@
+@name E2 Door
+@inputs [Door1 Door2]:entity Input
+@outputs CD STATE
+@persist MOVE SOUND:string CD STATE
+@trigger 
+
+# Random chip. I've found this code on internet, idk who's creator.
+
+SOUND = "doors/doormove1.wav" # SOUNDS
+SOUND2 = "doors/doorstop1.wav" # SOUNDS
+ 
+if(first()){
+    MOVE = 0
+    CD = 0
+    STATE = 0
+}
+ 
+if(Input & CD == 0){
+    CD = 1
+    if(STATE == 0)
+    {
+        STATE = 1
+        timer("moveout", 50)
+        entity():soundPlay(1, 0, SOUND)
+    }elseif(STATE == 1){
+        STATE = 0
+        timer("movein", 50)
+        entity():soundPlay(2, 0, SOUND)
+    }
+}
+ 
+ 
+if(clk("moveout")){
+    Door1:setPos(Door1:pos()+vec(0, 2, 0)) # DOOR MOVEMENT
+    Door2:setPos(Door2:pos()+vec(0, 2, 0)) # DOOR MOVEMENT
+ 
+ 
+    timer("moveout", 1)
+    MOVE++
+    if(MOVE == 45){
+        stoptimer("moveout")
+        MOVE = 0
+        soundStop(1)
+        entity():soundPlay(1, 0, SOUND2)
+        CD = 0
+    }
+}
+ 
+if(clk("movein")){
+    Door1:setPos(Door1:pos()+vec(0, -2, 0))
+    Door2:setPos(Door2:pos()+vec(0, -2, 0))
+ 
+    timer("movein", 1)
+    MOVE++
+    if(MOVE == 45){
+        stoptimer("movein")
+        MOVE = 0
+        soundStop(2)
+        entity():soundPlay(1, 0, SOUND2)
+ 
+        CD = 0
+    }
+}

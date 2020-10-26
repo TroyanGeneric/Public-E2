@@ -1,0 +1,30 @@
+@name Combine NPC
+@inputs Gun:entity
+@outputs 
+@persist 
+@trigger 
+
+############################
+# TroyanGeneric PUBLIC E2s #
+# Use at your own risk.    #
+# Wirelink:                #
+# Gun Prop -> Gun          #
+# Everytime you'll move    #
+# with the chip you need   #
+# to update it.            #################
+#  -> Right Click on Chip -> Update & Exit #
+############################################
+
+if(first() | duped()){
+    holoCreate(1)
+    holoModel(1,"models/Combine_Super_Soldier.mdl")
+    holoAnim(1,"idle1")
+}
+
+interval(100)
+
+Gun:setPos(entity():toWorld(vec(12,5,45)))
+Gun:setAng(entity():toWorld(ang(0,-110,0)))
+
+#holoAng(2,holoEntity(2):toWorld(ang(0,-10,0)))
+# models/combine_soldier.mdl
